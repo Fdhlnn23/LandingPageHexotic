@@ -24,9 +24,11 @@ export const config = {
         autoplay: true
     },
     factions: [
-        { name: "Los Santos Police Department", type: "gov", status: "Open", desc: "Menjaga keamanan dan ketertiban kota Los Santos." },
-        { name: "San Andreas Fire Department", type: "gov", status: "Closed", desc: "Menangani keadaan darurat medis dan kebakaran." },
-        { name: "San News", type: "gov", status: "Open", desc: "Menyajikan berita aktual dan hiburan untuk warga." },
-        { name: "Pemerintah Kota (Gov)", type: "gov", status: "Closed", desc: "Pusat perizinan dan regulasi hukum kota." }
+        { name: "Kepolisian Hexotic", type: "gov", status: "Open", desc: "Menjaga keamanan dan menegakkan hukum." },
+        { name: "Medis Hexotic", type: "gov", status: "Open", desc: "Memberikan pelayanan dan pertolongan medis kepada warga." },
+        { name: "Pewarta Hexotic", type: "gov", status: "Open", desc: "Menghadirkan berita, informasi, dan hiburan terkini." },
+        { name: "Pemerintah Kota", type: "gov", status: "Open", desc: "Mengelola administrasi dan pelayanan publik kota." },
+        { name: "Pedagang Hexotic", type: "gov", status: "Open", desc: "Melayani kebutuhan warga melalui kegiatan perdagangan." },
+        { name: "Mechanic Hexotic", type: "gov", status: "Open", desc: "Menyediakan layanan perbaikan dan perawatan kendaraan." }
     ]
 };
