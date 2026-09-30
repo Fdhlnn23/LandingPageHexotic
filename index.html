@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexotic Roleplay - Server SA-MP Indonesia</title>
+    <meta name="description" content="Mainkan GTA San Andreas Multiplayer di Hexotic Roleplay. Server SA-MP open.mp Indonesia dengan ekonomi seimbang, fitur menarik, dan komunitas aktif.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://hexotic-rp.com">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hexotic Roleplay - Server SA-MP Indonesia">
+    <meta property="og:description" content="Server SA-MP open.mp Indonesia dengan ekonomi seimbang dan fitur menarik.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hexotic-rp.com">
+    <meta property="og:image" content="https://hexotic-rp.com/logo.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Hexotic Roleplay",
+      "url": "https://hexotic-rp.com",
+      "logo": "https://hexotic-rp.com/logo.png"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Nav (N5 Floating Pill) -->
+    <nav class="navbar">
+        <div class="nav-pill">
+            <div class="nav-brand text-accent">Hexotic RP</div>
+            <button class="nav-toggle" aria-label="Toggle Menu" id="navToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#monitor" class="nav-link">Monitor</a>
+                <a href="#komunitas" class="nav-link">Komunitas</a>
+                <a href="#download" class="nav-link">Download</a>
+            </div>
+            <div class="nav-socials">
+                <a href="#" id="navDiscord" target="_blank" aria-label="Discord" class="social-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                </a>
+                <a href="#" id="navTiktok" target="_blank" aria-label="TikTok" class="social-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 0012.67-1.79V8.67a8.34 8.34 0 004.77 1.52V6.76a5 5 0 01-2.85-1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="hero container fade-in-up">
+            <div class="ip-card">
+                <span class="ip-text" id="serverIpDisplay">play.hexotic-rp.com:7777</span>
+                <button class="btn-copy" id="copyIpBtn" aria-label="Copy IP">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy
+                </button>
+            </div>
+            
+            <h1 class="hero-title">Kota malam <span class="text-accent">tanpa batas</span>.</h1>
+            <p class="hero-subtitle">Mulai cerita barumu di server SA-MP roleplay Indonesia yang paling dinamis. Ekonomi menengah, roleplay berkualitas.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Pemain Online</span>
+                    <span class="stat-value text-accent" id="statOnline">
+                        <div class="stat-skeleton"></div>
+                    </span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Member Discord</span>
+                    <span class="stat-value" id="statDiscord">
+                        <div class="stat-skeleton"></div>
+                    </span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Maksimal Slot</span>
+                    <span class="stat-value" id="statSlots">
+                        <div class="stat-skeleton"></div>
+                    </span>
+                </div>
+            </div>
+            
+            <a href="#carabermain" class="btn btn-primary">Mulai Main</a>
+        </section>
+
+        <!-- Cara Bermain -->
+        <section id="carabermain" class="section container fade-in-up">
+            <div class="section-header">
+                <h2 class="section-title">Cara Bermain</h2>
+                <p class="section-desc">Ikuti langkah sederhana ini untuk bergabung ke dalam kota.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Join Discord</h3>
+                    <p class="step-desc">Masuk ke server Discord kami untuk membaca peraturan dasar dan info server.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Daftar UCP</h3>
+                    <p class="step-desc">Gunakan bot di channel registrasi untuk membuat akun User Control Panel (UCP).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Connect IP</h3>
+                    <p class="step-desc">Tambahkan IP server di client SA-MP kamu dan gunakan nama UCP untuk login.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Buat Karakter</h3>
+                    <p class="step-desc">Masukkan PIN dari bot, lalu buat karakter pertamamu dengan nama RP (First_Last).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fitur Server -->
+        <section class="section container fade-in-up">
+            <div class="section-header">
+                <h2 class="section-title">Fitur Server</h2>
+                <p class="section-desc">Dibangun untuk kenyamanan roleplay jangka panjang.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <h3>Ekonomi Menengah</h3>
+                    <p class="text-muted">Tidak terlalu sulit, tapi butuh usaha untuk kaya. Harga kendaraan dan properti masuk akal.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <h3>Good & Bad Side</h3>
+                    <p class="text-muted">Faksi resmi aktif (Polisi, Medis) berimbang dengan gang, mafia, dan kartel yang terstruktur.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    <h3>Properti & Bisnis</h3>
+                    <p class="text-muted">Beli dan modifikasi rumah, ruko, restoran, atau buka bengkel modifikasi sendiri.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    <h3>Voice Chat Jarak Dekat</h3>
+                    <p class="text-muted">Berkomunikasi langsung di in-game tanpa Discord, didukung sistem radio komunikasi faksi.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    <h3>Sistem Unik</h3>
+                    <p class="text-muted">Minigames memancing, balap liar tersistem, perampokan bank berskala besar, dan banyak lagi.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <h3>Anti-Cheat Kuat</h3>
+                    <p class="text-muted">Client kustom dan deteksi server-side ketat memastikan lingkungan bermain yang adil.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monitor Server -->
+        <section id="monitor" class="section container fade-in-up">
+            <div class="section-header">
+                <h2 class="section-title">Monitor Server</h2>
+                <p class="section-desc">Status server secara real-time.</p>
+            </div>
+            
+            <div class="monitor-panel">
+                <div class="monitor-header">
+                    <div>
+                        <span id="serverBadge" class="status-badge online">Memuat...</span>
+                        <h3 id="serverHostname" style="margin-top: 0.5rem; margin-bottom: 0;">-</h3>
+                    </div>
+                    <div class="monitor-meta">
+                        <span id="serverVersion">Versi: -</span>
+                        <span id="serverLanguage">Bahasa: -</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.875rem;">
+                        <span class="text-muted">Slot Terpakai</span>
+                        <strong id="serverSlotText">0 / 0</strong>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="serverSlotProgress"></div>
+                    </div>
+                </div>
+                
+                <!-- Grafik Sederhana SVG Saja -->
+                <div style="margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">Tren Pemain (24 Jam Terakhir)</h4>
+                    <svg id="playerChart" width="100%" height="100" viewBox="0 0 1000 100" preserveAspectRatio="none" style="border: 1px dashed var(--color-border); border-radius: 4px;">
+                        <!-- Generated by JS -->
+                    </svg>
+                </div>
+
+                <div class="player-table-container" id="playerTableContainer">
+                    <table class="player-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Pemain</th>
+                                <th>Ping</th>
+                            </tr>
+                        </thead>
+                        <tbody id="playerTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komunitas / Discord -->
+        <section id="komunitas" class="section container fade-in-up" style="display: none;">
+            <!-- Ini akan disembunyikan jika ID Discord kosong/error -->
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title">Gabung Komunitas</h2>
+                <p class="section-desc" style="margin: 0 auto;">Discord adalah jantung dari roleplay kami.</p>
+            </div>
+            
+            <div class="discord-widget">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                <div class="discord-stats">
+                    <div><strong id="discordOnline">0</strong> <span class="text-muted">Online</span></div>
+                    <div><strong id="discordTotal">0</strong> <span class="text-muted">Member</span></div>
+                </div>
+                <div class="discord-member-avatars" id="discordAvatars"></div>
+                <a href="#" id="btnJoinDiscord" target="_blank" class="btn" style="background: white; color: #5865F2; margin-top: 1rem;">Gabung Server</a>
+            </div>
+        </section>
+
+        <!-- Galeri -->
+        <section id="galeri" class="section container fade-in-up" style="display: none;">
+            <!-- Ini akan disembunyikan jika tidak ada gambar -->
+            <div class="section-header">
+                <h2 class="section-title">Galeri</h2>
+                <p class="section-desc">Momen dari warga Los Santos.</p>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Download Client -->
+        <section id="download" class="section container fade-in-up">
+            <div class="download-card">
+                <h2 class="section-title">Unduh Client</h2>
+                <p class="text-muted">Dapatkan versi terbaru dari client Hexotic RP. Wajib digunakan untuk bermain.</p>
+                
+                <div class="download-features">
+                    <span>✓ Update Otomatis</span>
+                    <span id="dlSupport">✓ Support x32/x64</span>
+                    <span>✓ Anti-Cheat terintegrasi</span>
+                </div>
+                
+                <a href="#" id="btnDownload" class="btn btn-primary" style="width: 100%; max-width: 300px;">Unduh Sekarang</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Ft5 Statement) -->
+    <footer class="footer container">
+        <div class="footer-nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#monitor" class="nav-link">Monitor</a>
+            <a href="#komunitas" class="nav-link">Komunitas</a>
+        </div>
+        <div style="margin-bottom: var(--space-4);">
+            <a href="#" id="footerDiscord" target="_blank" class="social-icon" style="display: inline-block; margin: 0 0.5rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></a>
+            <a href="#" id="footerTiktok" target="_blank" class="social-icon" style="display: inline-block; margin: 0 0.5rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 0012.67-1.79V8.67a8.34 8.34 0 004.77 1.52V6.76a5 5 0 01-2.85-1z"/></svg></a>
+        </div>
+        <p class="text-muted" style="font-size: 0.875rem;">&copy; <span id="currentYear"></span> Hexotic Roleplay. Bukan bagian dari Rockstar Games atau open.mp.</p>
+    </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lbClose">✕</button>
+        <button class="lightbox-prev" id="lbPrev">❮</button>
+        <img src="" alt="Gallery Image" class="lightbox-img" id="lbImg">
+        <button class="lightbox-next" id="lbNext">❯</button>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
