@@ -14,8 +14,8 @@
     --color-paper-2: oklch(24% 0 0);
     --color-paper-3: oklch(30% 0 0);
     
-    --color-accent: oklch(75% 0.18 50); /* Neon Amber */
-    --color-accent-hover: oklch(80% 0.18 50);
+    --color-accent: #4c9bff; /* Khas Hexotic RP */
+    --color-accent-hover: #3a8cf0;
     
     --color-text: oklch(95% 0 0);
     --color-text-muted: oklch(70% 0 0);
