@@ -7,7 +7,12 @@ export function initGallery() {
     const lbPrev = document.getElementById('lbPrev');
     const lbNext = document.getElementById('lbNext');
     
-    const images = [];
+    const images = [
+        'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=800', // Night street
+        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800', // Sports car
+        'https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=800', // City neon
+        'https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&q=80&w=800'  // Car neon
+    ];
     
     if (!images || images.length === 0) {
         if (gallerySection) gallerySection.style.display = 'none';

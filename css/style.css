@@ -130,6 +130,7 @@ button {
 
 .btn-primary:hover {
     background-color: var(--color-accent-hover);
+    box-shadow: 0 0 20px color-mix(in oklch, var(--color-accent) 40%, transparent);
 }
 
 .btn-secondary {
@@ -213,11 +214,28 @@ button {
 
 /* Hero Section */
 .hero {
+    position: relative;
     padding: var(--space-16) 0 var(--space-12);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: radial-gradient(circle, color-mix(in oklch, var(--color-accent) 15%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .hero-title {
@@ -225,6 +243,7 @@ button {
     max-width: 800px;
     margin: 0 auto var(--space-4);
     letter-spacing: -0.02em;
+    position: relative;
 }
 
 .hero-subtitle {
@@ -387,8 +406,9 @@ button {
 }
 
 .feature-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-text-muted);
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px color-mix(in oklch, var(--color-accent) 15%, transparent);
 }
 
 .feature-icon {
