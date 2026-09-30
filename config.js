@@ -21,7 +21,7 @@ export const config = {
     },
     music: {
         url: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3", // Lofi royalty-free audio default
-        autoplay: false
+        autoplay: true
     },
     factions: [
         { name: "Los Santos Police Department", type: "gov", status: "Open", desc: "Menjaga keamanan dan ketertiban kota Los Santos." },

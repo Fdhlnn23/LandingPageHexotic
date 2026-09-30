@@ -98,12 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         if (config.music.autoplay) {
-            // Autoplay policies might block this until user interaction
             bgmPlayer.play().then(() => {
                 isPlaying = true;
                 btnBgm.classList.add('playing-pulse');
             }).catch(e => {
-                console.log("Autoplay dicegah oleh browser. Pengguna harus play manual.");
+                // Autoplay blocked by browser. Play on first user interaction anywhere.
+                const playOnInteract = () => {
+                    if (!isPlaying) {
+                        bgmPlayer.play().then(() => {
+                            isPlaying = true;
+                            btnBgm.classList.add('playing-pulse');
+                        }).catch(err => console.log(err));
+                    }
+                    document.removeEventListener('click', playOnInteract);
+                    document.removeEventListener('touchstart', playOnInteract);
+                };
+                document.addEventListener('click', playOnInteract);
+                document.addEventListener('touchstart', playOnInteract);
             });
         }
     } else if (btnBgm) {
