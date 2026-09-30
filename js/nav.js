@@ -54,17 +54,33 @@ export function initNav() {
         copyIpBtn.addEventListener('click', async () => {
             try {
                 await navigator.clipboard.writeText(serverIpDisplay.textContent);
-                const originalHtml = copyIpBtn.innerHTML;
-                copyIpBtn.innerHTML = `✓ Tersalin`;
-                copyIpBtn.style.color = "var(--color-success)";
-                
-                setTimeout(() => {
-                    copyIpBtn.innerHTML = originalHtml;
-                    copyIpBtn.style.color = "";
-                }, 1500);
+                showToast("IP Server berhasil disalin!");
             } catch (err) {
                 console.error('Failed to copy IP', err);
             }
         });
     }
+}
+
+// Helper Toast Notification
+export function showToast(message) {
+    const container = document.getElementById('toastContainer');
+    if (!container) return;
+    
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    
+    container.appendChild(toast);
+    
+    // Trigger reflow to start animation
+    void toast.offsetWidth;
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300); // Wait for transition to finish
+    }, 3000);
 }

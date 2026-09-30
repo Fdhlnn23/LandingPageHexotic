@@ -18,5 +18,15 @@ export const config = {
     },
     api: {
         statusEndpoint: "/api/status" 
-    }
+    },
+    music: {
+        url: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3", // Lofi royalty-free audio default
+        autoplay: false
+    },
+    factions: [
+        { name: "Los Santos Police Department", type: "gov", status: "Open", desc: "Menjaga keamanan dan ketertiban kota Los Santos." },
+        { name: "San Andreas Fire Department", type: "gov", status: "Closed", desc: "Menangani keadaan darurat medis dan kebakaran." },
+        { name: "San News", type: "gov", status: "Open", desc: "Menyajikan berita aktual dan hiburan untuk warga." },
+        { name: "Pemerintah Kota (Gov)", type: "gov", status: "Closed", desc: "Pusat perizinan dan regulasi hukum kota." }
+    ]
 };
